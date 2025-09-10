@@ -1,0 +1,128 @@
+[
+    {
+        "id": "3125416a14744f8b",
+        "type": "tab",
+        "label": "Fluxo 1",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "1d152d869052caa8",
+        "type": "debug",
+        "z": "3125416a14744f8b",
+        "name": "debug 1",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1120,
+        "y": 700,
+        "wires": []
+    },
+    {
+        "id": "337048363f6eb185",
+        "type": "ui_gauge",
+        "z": "3125416a14744f8b",
+        "name": "",
+        "group": "fd2c4f7c816d3f3e",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "Velocidade (m/s)",
+        "label": "m/s",
+        "format": "{{msg.velocidade}}",
+        "min": 0,
+        "max": "40",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "15",
+        "seg2": "30",
+        "diff": false,
+        "className": "",
+        "x": 1070,
+        "y": 760,
+        "wires": []
+    },
+    {
+        "id": "daa59ee9f3e3113d",
+        "type": "inject",
+        "z": "3125416a14744f8b",
+        "name": "chute",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "{   \"device_id\": \"medidor01\",   \"velocidade\": 39.5,   \"timestamp\": \"2025-09-09T20:00:00Z\" }",
+        "payloadType": "json",
+        "x": 710,
+        "y": 740,
+        "wires": [
+            [
+                "1d152d869052caa8",
+                "0c1fa119e49631fd"
+            ]
+        ]
+    },
+    {
+        "id": "0c1fa119e49631fd",
+        "type": "function",
+        "z": "3125416a14744f8b",
+        "name": "function 1",
+        "func": "msg.payload = msg.payload.velocidade;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 880,
+        "y": 760,
+        "wires": [
+            [
+                "337048363f6eb185"
+            ]
+        ]
+    },
+    {
+        "id": "fd2c4f7c816d3f3e",
+        "type": "ui_group",
+        "name": "Velocidade da Bola",
+        "tab": "01a9220224deab4f",
+        "order": 1,
+        "disp": true,
+        "width": 6,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "01a9220224deab4f",
+        "type": "ui_tab",
+        "name": "Chute",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "e8b69dd8b2f374fd",
+        "type": "global-config",
+        "env": [],
+        "modules": {
+            "node-red-dashboard": "3.6.6"
+        }
+    }
+]
