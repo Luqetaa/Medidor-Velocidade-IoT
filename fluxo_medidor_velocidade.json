@@ -67,7 +67,7 @@
         "once": false,
         "onceDelay": 0.1,
         "topic": "",
-        "payload": "{   \"device_id\": \"medidor01\",   \"velocidade\": 39.5,   \"timestamp\": \"2025-09-09T20:00:00Z\" }",
+        "payload": "{   \"device_id\": \"medidor01\",   \"velocidade\": 39.5 }",
         "payloadType": "json",
         "x": 710,
         "y": 740,
