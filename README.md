@@ -1,5 +1,7 @@
 # Medidor-Velocidade-IoT
 
+link do video no youtube [youtu.be/AgjCpLPqBDw](https://youtu.be/AgjCpLPqBDw)  
+
 ## 1. Integrantes do grupo
 
 Lucas Cavalcante RM 562857  
