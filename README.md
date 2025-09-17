@@ -7,7 +7,7 @@ link do video no youtube [youtu.be/AgjCpLPqBDw](https://youtu.be/AgjCpLPqBDw)
 Lucas Cavalcante RM 562857  
 Matheus Rodrigues RM 561689  
 Manoah Leão RM 563713  
-Caio Nascimento RM 561383
+Caio Nascimento battista RM 561383
 
 ## 2. Descrição do projeto
 
